@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+p {
+    font-family: Montserrat, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.item {
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    height: auto;
+    width: 300px;
+    text-align: center;
+    margin: 40px;
+    transition: 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item img {
+    padding: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item img:hover {
+    padding: 20px;
+    border-radius:25%;
+    transition: 0.3s;
+    transform: scale(1.5);
 }
 
-.App-link {
-  color: #61dafb;
+.comprar {
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: none;
+    height: 50px;
+    width: 100%;
+    background: #008B8B;
+    box-shadow: inset 20px 20px 60px #007676,
+    inset -20px -20px 60px #00a0a0;
+    color: white;
+    transition: 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.comprar:hover{
+    box-shadow: inset -20px -20px 60px #007676,
+    inset 20px 20px 60px #00a0a0;
+    transition: 0.3s;
+
+}
+
+.products {
+    /*margin-left: 50vm;*/
+    display: inline-flex;
 }

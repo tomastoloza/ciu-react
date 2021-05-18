@@ -3,9 +3,13 @@ import {capitalize} from "../scripts";
 
 const Product = ({product}) => {
     return (
-        <Fragment>
-            <p>Producto: {capitalize(product.name)}, Precio: ${product.price}</p>
-        </Fragment>
+        <div className="item">
+            <img src={product.image} alt={product.name}/>
+            <hr/>
+            <p><b>{capitalize(product.name)}</b></p>
+            <p>${product.price}</p>
+            <button className={"comprar"}>Comprar</button>
+        </div>
     )
 }
 

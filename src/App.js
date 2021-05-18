@@ -19,7 +19,9 @@ function App() {
             <h1>
                 Roberson Brothers & Sons - Instrumentos Musicales
             </h1>
-            {products && products.map(p => <Product product={p}/>)}
+            <div className={"products"}>
+                {products && products.map(p => <Product product={p}/>)}
+            </div>
             <Footer estYear={2014}/>
         </Fragment>
     );
