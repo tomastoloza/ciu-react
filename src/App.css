@@ -1,46 +1,43 @@
-p {
-    font-family: Montserrat, serif;
+:root {
+    --background: #e0e0e0;
+    --shadow-up: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+    --shadow-down: inset 4px 4px 8px #adadad, inset -4px -4px 8px #ebebeb;
+    --shadow-down-less: inset 0px 0px 4px #adadad, inset -4px -4px 8px #ebebeb;
+    --shadow-down-alt: inset 16px 16px 18px #adadad, inset -4px -4px 8px #ebebeb;
+    --darkgrey: #6a6a6a;
 }
 
+p, h1 {
+    font-family: Montserrat, serif;
+    color: var(--darkgrey);
+}
+
+html {
+    background: #e0e0e0;
+}
 
 .item {
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-    height: auto;
+    border-radius: 30px;
+    background: var(--background);
+    box-shadow: var(--shadow-down);
+    height: 340px;
     width: 300px;
     text-align: center;
-    margin: 40px;
     transition: 0.3s;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 40px;
 }
 
 .item img {
-    padding: 20px;
-    border-radius: 50%;
-    transition: 0.3s;
+    padding: 40px;
+    /*border-radius: 50%;*/
+    /*transition: 0.3s;*/
+    height: 150px;
 }
 
-.item img:hover {
-    padding: 20px;
-    border-radius:25%;
-    transition: 0.3s;
-    transform: scale(1.5);
-}
-
-.comprar {
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border: none;
-    height: 50px;
-    width: 100%;
-    background: #008B8B;
-    box-shadow: inset 20px 20px 60px #007676,
-    inset -20px -20px 60px #00a0a0;
-    color: white;
-    transition: 0.3s;
-}
-
-.comprar:hover{
+.comprar:hover {
     box-shadow: inset -20px -20px 60px #007676,
     inset 20px 20px 60px #00a0a0;
     transition: 0.3s;
@@ -48,6 +45,85 @@ p {
 }
 
 .products {
-    /*margin-left: 50vm;*/
-    display: inline-flex;
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background: var(--background);
+    box-shadow: var(--shadow-down);
+    transition: 0.2s;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.button:active {
+    box-shadow: var(--shadow-down-alt);
+    transition: 0.2s;
+}
+
+
+.button-icon {
+    color: var(--darkgrey);
+    text-align: center;
+    position: relative;
+    top: calc(50% - 12px); /* 50% - 3/4 of icon height */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background: var(--background);
+    box-shadow: var(--shadow-down);
+    color: var(--darkgrey);
+    font-family: Helvetica;
+    font-weight: 300;
+    margin: 40px;
+    border-radius: 20px;
+}
+
+.navbar__title {
+    margin-right: auto;
+    font-size: 150%;
+    padding: 12px 16px;
+    font-weight: bold;
+}
+
+.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: normal;
+}
+
+input[type=text]{
+    border-radius: 10px;
+    background: var(--background);
+    box-shadow: var(--shadow-down);
+    border: 0;
+    padding-left: 10px;
+}
+input[type=text]:focus{
+    /*background: white;*/
+    box-shadow: var(--shadow-down-less);
+
+}
+
+
+
+*:focus {
+    outline: none;
 }
