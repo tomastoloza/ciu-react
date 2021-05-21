@@ -1,10 +1,15 @@
 import React, {Fragment} from 'react';
-import {capitalize} from "../scripts";
 
-const Product = ({product}) => {
+
+const Product = ({product, setShoppingCart}) => {
+    function addToShoppingCart() {
+        setShoppingCart(products => [...products, product])
+    }
+
     return (
         <Fragment>
-            <p>Producto: {capitalize(product.name)}, Precio: ${product.price}</p>
+            <p>Producto: {(product.name)}, Precio: ${product.price}</p>
+            <button onClick={addToShoppingCart}>Agregar al carrito</button>
         </Fragment>
     )
 }
