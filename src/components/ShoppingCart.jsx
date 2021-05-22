@@ -9,12 +9,12 @@ const ShoppingCart = ({shoppingCart, setShoppingCart}) => {
 
     return (
         <Fragment>
-            <button>Shopping cart {shoppingCart.length}</button>
+            <p>Shopping cart {shoppingCart.length}</p>
             <ul>
                 {shoppingCart.map(product => {
-                    return <div>
-                        <Product product={product} setShoppingCart={setShoppingCart}/>
-                        <button onClick={() => removeFromShoppingCart(product)}>Remover</button>
+                    return <div className={"ShoppingCartItem"}>
+                        <Product product={product} setShoppingCart={setShoppingCart}
+                                 onClick={() => removeFromShoppingCart(product)} button={"Remover"}/>
                     </div>
                 })}
             </ul>

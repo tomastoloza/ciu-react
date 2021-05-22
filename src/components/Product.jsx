@@ -1,16 +1,19 @@
 import React, {Fragment} from 'react';
+import "./Product.css"
 
-
-const Product = ({product, setShoppingCart}) => {
+const Product = ({product, setShoppingCart, onClick, button}) => {
     function addToShoppingCart() {
         setShoppingCart(products => [...products, product])
     }
 
     return (
-        <Fragment>
-            <p>Producto: {(product.name)}, Precio: ${product.price}</p>
-            <button onClick={addToShoppingCart}>Agregar al carrito</button>
-        </Fragment>
+        <section className={"product"}>
+            <header>
+                {(product.name)}
+                <p>${product.price}</p>
+                <button onClick={onClick || addToShoppingCart}>{button}</button>
+            </header>
+        </section>
     )
 }
 

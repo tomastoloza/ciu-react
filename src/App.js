@@ -32,7 +32,8 @@ function App() {
                 Roberson Brothers & Sons - Instrumentos Musicales
             </h1>
             {products.map(product => {
-                return <Product product={product} products={products} action={"Add"} setShoppingCart={setShoppingCart}/>
+                return <Product product={product} products={products} setShoppingCart={setShoppingCart}
+                                button={"Agregar al carrito"}/>
             })}
             <Footer estYear={2014}/>
         </Fragment>
