@@ -8,11 +8,8 @@ const Product = ({product, setShoppingCart, onClick, button}) => {
 
     return (
         <section className={"product"}>
-            <header>
-                {(product.name)}
-                <p>${product.price}</p>
-                <button onClick={onClick || addToShoppingCart}>{button}</button>
-            </header>
+            <p>{product.name} ${product.price}</p>
+            <button onClick={onClick || addToShoppingCart}>{button}</button>
         </section>
     )
 }
